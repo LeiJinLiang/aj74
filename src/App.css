@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+  left: 0;
+  right: 0;
+  height: 45px;
+  position: absolute;
+  bottom: 100px;
+}
+.content{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.text{
+  flex: auto;
+  outline: none;
+  border-right: none;
+  border-color: #61dafb;
+}
+.btn{
+  width: 80px;
+  height: 100%;
+  background-color: #61dafb;
+  border: none;
+  outline: none;
+}
