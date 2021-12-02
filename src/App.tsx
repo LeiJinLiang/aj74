@@ -1,25 +1,25 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { Emoji } from './components/Emoji';
+import { Emoji, emojiMap } from './components/Emoji';
 import type { IEmoji } from './components/Emoji';
 import './App.css';
 
 function App() {
-  const [value, setValue] = useState<string>('');
 
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const [content, setContent] = useState<string>('');
 
   const handleKeyDown = useCallback((event: React.KeyboardEvent)=>{
-    if(event.keyCode === 8 && inputRef.current?.selectionStart === inputRef.current?.selectionEnd){
-      let indexEnd = inputRef.current?.selectionStart ?? 1 - 1;
+    if(event.keyCode === 8 && inputRef.current?.selectionStart && inputRef.current?.selectionStart === inputRef.current?.selectionEnd){
+      let indexEnd = inputRef.current?.selectionStart  - 1;
       let charToDelete = inputRef.current?.value.charAt(indexEnd); 
       if (charToDelete === "]") {
         event.preventDefault();
-        let indexStart = value.lastIndexOf("[", indexEnd);
+        let indexStart = inputRef.current.value.lastIndexOf("[", indexEnd);
         inputRef.current?.setRangeText("", indexStart, indexEnd + 1, "end")
       }
     }
-  },[inputRef,value]);
+  },[inputRef]);
 
   const handleSelect = useCallback((emoji: IEmoji) => {
     if(inputRef.current){
@@ -35,12 +35,36 @@ function App() {
     }
   },[inputRef]);
 
+  const handleSend = useCallback(()=>{
+    if(inputRef.current){
+      let content = inputRef.current.value;
+      if(content !== ''){
+        const emotionReg =  /\[[^\[\]]+?\]/g;
+        const matchResult = content.match(emotionReg);
+        if(matchResult){
+          matchResult.forEach((emotionKey) => {
+            if (emotionKey in emojiMap) {
+              content = content.replace(
+                emotionKey,
+                `<img src="${emojiMap[emotionKey]}">`
+              );
+            }
+          });
+        }
+        setContent(content);
+        inputRef.current.value = ''; 
+      } 
+    
+    }
+  },[inputRef]);
+
   return (
     <div className="App"> 
+      <section className="message" dangerouslySetInnerHTML={{__html: content}} />
       <section className="container">
         <div className='content'>
-           <input ref={inputRef} onKeyDown={handleKeyDown} type="text" className="text" value={value} onChange={(e)=> { setValue(e.target.value)}} />
-           <button className="btn">send</button>
+           <input ref={inputRef} onKeyDown={handleKeyDown} type="text" className="text" />
+           <button className="btn" onClick={handleSend}>send</button>
         </div>      
         <Emoji 
           onSelect={handleSelect}

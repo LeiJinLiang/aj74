@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  height: 100vh;
+  position: relative;
 }
 
 .App-logo {
@@ -62,4 +65,9 @@
   background-color: #61dafb;
   border: none;
   outline: none;
+}
+.message{
+  background-color: aqua;
+  padding: 20px;
+  min-height: 200px;
 }

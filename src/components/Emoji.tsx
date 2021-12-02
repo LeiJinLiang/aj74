@@ -33,19 +33,25 @@ interface IEmojiProps {
    onSelect : (emoji: IEmoji) => void;
 }
 
-export const Emoji:FC<IEmojiProps> = ({ onSelect }) => {
-    const origin = Array.from({length: 4}, (v, i) => ++i);
-    const emojiList: IEmoji[] = origin.map((emoji)=> ({
-        name: `andy${emoji}`,
-        url: `${emoji}.png`
-    })) 
 
+
+export let emojiMap : any= {};
+const origin = Array.from({length: 4}, (v, i) => ++i);
+const emojiList: IEmoji[] = origin.map((emoji)=> {
+    const name = `andy${emoji}`
+    const url = `${prefixPath}/${emoji}.png`;
+    emojiMap[`[andy${emoji}]`] = url;
+    return { name, url }
+}) 
+
+export const Emoji:FC<IEmojiProps> = ({ onSelect }) => {
+ 
     return (
         <Wrapper>
             <List>
                 {emojiList.map((emoji, index)=>(
                     <Item key={index}>
-                        <img src={`${prefixPath}/${emoji.url}`} onClick={()=> { onSelect(emoji)}} title="" alt="" />
+                        <img src={emoji.url} onClick={()=> { onSelect(emoji)}} title="" alt="" />
                     </Item>
                 ))}
                 
@@ -53,3 +59,4 @@ export const Emoji:FC<IEmojiProps> = ({ onSelect }) => {
         </Wrapper>
     )
 }
+
