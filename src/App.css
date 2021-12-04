@@ -67,7 +67,7 @@
   outline: none;
 }
 .message{
-  background-color: aqua;
+  /* background-color: aqua; */
   padding: 20px;
-  min-height: 200px;
+  height: 100%;
 }

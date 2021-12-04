@@ -51,7 +51,7 @@ function App() {
             }
           });
         }
-        setContent(content);
+        setContent(text => text+content);
         inputRef.current.value = ''; 
       } 
     

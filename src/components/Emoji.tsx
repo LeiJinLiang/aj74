@@ -25,9 +25,9 @@ const Item = styled.li`
    list-style: none;
 `
 
-const prefixPath: string = process.env.NODE_ENV === 'development'? 'http://localhost:3000/images': `${process.env.PUBLIC_URL}/images`;
+const prefixPath: string = process.env.NODE_ENV === 'development'? 'http://localhost:3000/aj74/images': `${process.env.PUBLIC_URL}/images`;
 
-console.log('process.env.PUBLIC_URL',prefixPath)
+console.log('process.env.PUBLIC_URL',process.env)
 
 interface IEmojiProps {
    onSelect : (emoji: IEmoji) => void;
