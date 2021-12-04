@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "http://localhost:5000/static/css/main.35ca751a.chunk.css",
-    "main.js": "http://localhost:5000/static/js/main.10d5e0f6.chunk.js",
-    "main.js.map": "http://localhost:5000/static/js/main.10d5e0f6.chunk.js.map",
-    "runtime-main.js": "http://localhost:5000/static/js/runtime-main.066d34c4.js",
-    "runtime-main.js.map": "http://localhost:5000/static/js/runtime-main.066d34c4.js.map",
-    "static/js/2.7cd92fa9.chunk.js": "http://localhost:5000/static/js/2.7cd92fa9.chunk.js",
-    "static/js/2.7cd92fa9.chunk.js.map": "http://localhost:5000/static/js/2.7cd92fa9.chunk.js.map",
-    "static/js/3.a3aee2a1.chunk.js": "http://localhost:5000/static/js/3.a3aee2a1.chunk.js",
-    "static/js/3.a3aee2a1.chunk.js.map": "http://localhost:5000/static/js/3.a3aee2a1.chunk.js.map",
-    "index.html": "http://localhost:5000/index.html",
-    "static/css/main.35ca751a.chunk.css.map": "http://localhost:5000/static/css/main.35ca751a.chunk.css.map",
-    "static/js/2.7cd92fa9.chunk.js.LICENSE.txt": "http://localhost:5000/static/js/2.7cd92fa9.chunk.js.LICENSE.txt"
+    "main.css": "https://leijinliang.github.io/aj74/static/css/main.35ca751a.chunk.css",
+    "main.js": "https://leijinliang.github.io/aj74/static/js/main.20121e4d.chunk.js",
+    "main.js.map": "https://leijinliang.github.io/aj74/static/js/main.20121e4d.chunk.js.map",
+    "runtime-main.js": "https://leijinliang.github.io/aj74/static/js/runtime-main.c1ab6907.js",
+    "runtime-main.js.map": "https://leijinliang.github.io/aj74/static/js/runtime-main.c1ab6907.js.map",
+    "static/js/2.5a4bf795.chunk.js": "https://leijinliang.github.io/aj74/static/js/2.5a4bf795.chunk.js",
+    "static/js/2.5a4bf795.chunk.js.map": "https://leijinliang.github.io/aj74/static/js/2.5a4bf795.chunk.js.map",
+    "static/js/3.a3aee2a1.chunk.js": "https://leijinliang.github.io/aj74/static/js/3.a3aee2a1.chunk.js",
+    "static/js/3.a3aee2a1.chunk.js.map": "https://leijinliang.github.io/aj74/static/js/3.a3aee2a1.chunk.js.map",
+    "index.html": "https://leijinliang.github.io/aj74/index.html",
+    "static/css/main.35ca751a.chunk.css.map": "https://leijinliang.github.io/aj74/static/css/main.35ca751a.chunk.css.map",
+    "static/js/2.5a4bf795.chunk.js.LICENSE.txt": "https://leijinliang.github.io/aj74/static/js/2.5a4bf795.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.066d34c4.js",
-    "static/js/2.7cd92fa9.chunk.js",
+    "static/js/runtime-main.c1ab6907.js",
+    "static/js/2.5a4bf795.chunk.js",
     "static/css/main.35ca751a.chunk.css",
-    "static/js/main.10d5e0f6.chunk.js"
+    "static/js/main.20121e4d.chunk.js"
   ]
 }
