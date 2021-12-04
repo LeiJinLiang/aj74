@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-
 export interface IEmoji{
    name : string;
    url: string;
@@ -26,8 +25,9 @@ const Item = styled.li`
    list-style: none;
 `
 
-const prefixPath: string = 'http://localhost:3000/images';
+const prefixPath: string = process.env.NODE_ENV === 'development'? 'http://localhost:3000/images': `${process.env.PUBLIC_URL}/images`;
 
+console.log('process.env.PUBLIC_URL',prefixPath)
 
 interface IEmojiProps {
    onSelect : (emoji: IEmoji) => void;
