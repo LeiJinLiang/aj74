@@ -39,6 +39,7 @@ function App() {
     if(inputRef.current){
       let content = inputRef.current.value;
       if(content !== ''){
+       //eslint-disable-next-line
         const emotionReg =  /\[[^\[\]]+?\]/g;
         const matchResult = content.match(emotionReg);
         if(matchResult){
